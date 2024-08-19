@@ -49,7 +49,7 @@
       </ul>
       <!--  -->
       <span
-        class="text-3xl cursor-pointer md:static absolute md:pl-0 pl-5 left-0 md:text-yellow-500 text-white"
+        class="text-3xl cursor-pointer md:static absolute md:pl-0 pl-5 left-0 text-white"
       >
         <ion-icon name="moon" onclick="Menu(this)"></ion-icon>
       </span>
@@ -64,12 +64,15 @@
 <script>
   function Menu(e) {
     const list = document.querySelector('main')
+    const Moon = document.querySelector('span')
     if (e.name === 'moon') {
       e.name = 'loader text-[white]'
       list.classList.add('bg-[black]', 'text-[white]')
+      Moon.classList.add('text-[black]')
     } else {
       e.name = 'moon'
       list.classList.remove('bg-[black]', 'text-[white]')
+      Moon.classList.remove('text-[black]')
     }
   }
 </script>
