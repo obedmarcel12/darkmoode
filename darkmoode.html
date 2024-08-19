@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <link
+      rel="stylesheet"
+      href=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/svg/close.svg"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header
+      class="w-full h-[13vh] bg-blue-600 shadow-2xl flex items-center justify-around"
+    >
+      <nav
+        class="md:static md:flex md:flex-row flex flex-col md:font-mono md:font-semibold md:hover:text-white hover:text-sky-300 cursor-pointer text-lg md:duration-500 md:items-center items-start md:pl-0 pl-5 absolute md:opacity-100 opacity-0 left-0 gap-5"
+      >
+        <p>Home</p>
+        <p>About</p>
+        <p>Contact</p>
+        <p>Service</p>
+      </nav>
+      <!--  -->
+      <ul class="md:flex hidden items-center gap-4">
+        <button
+          class="w-[8vw] h-[5vh] font-medium font-mono bg-slate-800 text-white rounded-md"
+        >
+          Log in
+        </button>
+        <button
+          class="w-[8vw] h-[5vh] font-medium font-mono bg-white border-[1px] border-black rounded-md"
+        >
+          Sign Up
+        </button>
+      </ul>
+      <!--  -->
+      <span
+        class="text-3xl cursor-pointer md:static absolute md:pl-0 pl-5 left-0 md:text-yellow-500 text-white"
+      >
+        <ion-icon name="moon" onclick="Menu(this)"></ion-icon>
+      </span>
+    </header>
+    <!--  -->
+    <main class="opacity-0 w-full h-[87vh]"></main>
+  </body>
+</html>
+
+<script>
+  function Menu(e) {
+    const list = document.querySelector('main')
+    if (e.name === 'moon') {
+      e.name = 'loader text-[white]'
+      list.classList.add('opacity-[100]')
+      list.classList.add('bg-[black]')
+    } else {
+      e.name = 'moon'
+      list.classList.remove('opacity-[100]')
+      list.classList.remove('bg-[red]')
+    }
+  }
+</script>
