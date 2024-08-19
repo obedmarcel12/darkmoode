@@ -22,12 +22,12 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-blue-800">
+  <body>
     <header
-      class="w-full h-[13vh] bg-white shadow-2xl flex items-center justify-around"
+      class="w-full h-[13vh] bg-blue-600 shadow-2xl flex items-center justify-around"
     >
       <nav
-        class="md:static md:flex md:flex-row flex flex-col md:font-mono md:font-semibold md:hover:text-sky-700 hover:text-sky-300 cursor-pointer text-lg md:duration-500 md:items-center items-start md:pl-0 pl-5 absolute md:opacity-100 opacity-0 left-0 md:top-0 top-[-400px] transition-all ease-in-out duration-500 gap-5"
+        class="md:static md:flex md:flex-row flex flex-col md:font-mono md:font-semibold md:hover:text-white hover:text-sky-300 cursor-pointer text-lg md:duration-500 md:items-center items-start md:pl-0 pl-5 absolute md:opacity-100 opacity-0 left-0 gap-5"
       >
         <p>Home</p>
         <p>About</p>
@@ -48,35 +48,28 @@
         </button>
       </ul>
       <!--  -->
-      <span class="text-3xl md:hidden flex absolute left-0 pl-6">
+      <span
+        class="text-3xl cursor-pointer md:static absolute md:pl-0 pl-5 left-0 md:text-yellow-500 text-white"
+      >
         <ion-icon name="moon" onclick="Menu(this)"></ion-icon>
       </span>
     </header>
     <!--  -->
-    <!--  -->
+    <main class="opacity-0 w-full h-[87vh]"></main>
   </body>
 </html>
 
 <script>
   function Menu(e) {
-    const list = document.querySelector('nav')
-
+    const list = document.querySelector('main')
     if (e.name === 'moon') {
-      e.name = 'search'
-      list.classList.add(
-        'opacity-[100]',
-        'text-white',
-        'w-[100%]',
-        'h-[90vh]',
-        'bg-[black]',
-        'font-serif',
-        'text-2xl'
-      )
-      list.classList.add('top-[80px]')
+      e.name = 'loader text-[white]'
+      list.classList.add('opacity-[100]')
+      list.classList.add('bg-[black]')
     } else {
       e.name = 'moon'
       list.classList.remove('opacity-[100]')
-      list.classList.remove('top-[80px]')
+      list.classList.remove('bg-[red]')
     }
   }
 </script>
