@@ -55,7 +55,9 @@
       </span>
     </header>
     <!--  -->
-    <main class="opacity-0 w-full h-[87vh]"></main>
+    <main class="w-full h-[87vh] flex items-center justify-center">
+      <h1 class="font-sans text-[10vh] border-[15px] border-[blue]">OBETECH</h1>
+    </main>
   </body>
 </html>
 
@@ -64,12 +66,10 @@
     const list = document.querySelector('main')
     if (e.name === 'moon') {
       e.name = 'loader text-[white]'
-      list.classList.add('opacity-[100]')
-      list.classList.add('bg-[black]')
+      list.classList.add('bg-[black]', 'text-[white]')
     } else {
       e.name = 'moon'
-      list.classList.remove('opacity-[100]')
-      list.classList.remove('bg-[red]')
+      list.classList.remove('bg-[black]', 'text-[white]')
     }
   }
 </script>
