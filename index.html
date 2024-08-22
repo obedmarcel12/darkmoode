@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>darkmoode</title>
     <link rel="stylesheet" href="src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
     <link
       rel="stylesheet"
       href=" https://unpkg.com/ionicons@7.1.0/dist/ionicons/svg/close.svg"
@@ -22,41 +27,101 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="bg-[whitesmoke]">
     <header
-      class="w-full h-[13vh] bg-blue-600 shadow-2xl flex items-center justify-around"
+      class="w-full h-[13vh] bg-blue-800 shadow-2xl flex items-center justify-between"
     >
       <nav
-        class="md:static md:flex md:flex-row flex flex-col md:font-mono md:font-semibold md:hover:text-white hover:text-sky-300 cursor-pointer text-lg md:duration-500 md:items-center items-start md:pl-0 pl-5 absolute md:opacity-100 opacity-0 left-0 gap-5"
+        class="md:static md:flex md:flex-row flex flex-col md:font-mono md:font-semibold md:hover:text-white hover:text-sky-300 cursor-pointer text-lg md:duration-500 md:items-center items-start md:pl-8 pl-5 absolute md:opacity-100 opacity-0 left-0 gap-5"
       >
-        <p>Home</p>
-        <p>About</p>
-        <p>Contact</p>
-        <p>Service</p>
+        <ul class="flex items-center gap-5 text-white font-sans font-medium">
+          <img
+            class="inline h-[6vh] rounded-lg"
+            src="src/bootstrap.jpeg"
+            alt=""
+          />
+          <a href="/">Docs</a>
+          <a href="/">Examples</a>
+          <a href="/">Icons</a>
+          <a href="/">Themes</a>
+          <a href="/">Blog</a>
+        </ul>
       </nav>
       <!--  -->
-      <ul class="md:flex hidden items-center gap-4">
-        <button
-          class="w-[8vw] h-[5vh] font-medium font-mono bg-slate-800 text-white rounded-md"
+      <nav class="flex items-center text-xl text-white gap-5 pr-8">
+        <i class="bi bi-github"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-opencollective"></i>
+        <span class="h-8 border-[0.1px] border-[#9c9c9c]"></span>
+        <!--  -->
+        <span
+          id="moon"
+          class="cursor-pointer md:static absolute md:pl-0 pl-5 left-0 text-white"
         >
-          Log in
-        </button>
-        <button
-          class="w-[8vw] h-[5vh] font-medium font-mono bg-white border-[1px] border-black rounded-md"
-        >
-          Sign Up
-        </button>
-      </ul>
-      <!--  -->
-      <span
-        class="text-3xl cursor-pointer md:static absolute md:pl-0 pl-5 left-0 text-white"
-      >
-        <ion-icon name="moon" onclick="Menu(this)"></ion-icon>
-      </span>
+          <ion-icon name="moon" onclick="Menu(this)"></ion-icon>
+        </span>
+      </nav>
     </header>
     <!--  -->
     <main class="w-full h-[87vh] flex items-center justify-center">
-      <h1 class="font-sans text-[10vh] border-[15px] border-[blue]">OBETECH</h1>
+      <div class="w-[95vw] flex flex-col">
+        <div class="flex gap-10">
+          <!-- section 1 -->
+          <section class="flex flex-col gap-7">
+            <ul>
+              <button
+                id="Button"
+                class="font-sans font-bold bg-sky-200 rounded-full border-[1px] border-[skyblue] w-[20vw] h-[5.9vh]"
+              >
+                New in v1.11.0: 100 new icons!
+              </button>
+            </ul>
+
+            <strong class="flex flex-col gap-3">
+              <b class="font-sans font-semibold text-5xl">Bootstrap Icons </b>
+              <ul class="flex flex-col gap-8">
+                <small class="font-sans font-normal text-2xl"
+                  >Free, high quality, open source icon library with over 2,000
+                  icons. <br />
+                  Include them anyway you like—SVGs, SVG sprite, or web fonts.
+                  Use <br />
+                  them with or without
+                  <span class="underline text-blue-600">Bootstrap</span> in any
+                  project.</small
+                >
+                <div class="flex items-center gap-4">
+                  <span
+                    id="npm"
+                    class="flex items-center justify-center gap-9 shadow-sm w-[25vw] h-[11vh] bg-[#e8e7fe] rounded-xl"
+                  >
+                    <p class="font-mono font-normal text-[1.4vw]">
+                      $ npm i bootstrap-icons
+                    </p>
+                    <i
+                      class="bi bi-clipboard cursor-pointer hover:text-blue-600 text-xl"
+                    ></i>
+                  </span>
+                  <!--  -->
+                  <span
+                    id="Figma"
+                    class="flex items-center justify-center gap-1 w-[15vw] h-[11vh] border-2 border-black hover:bg-black hover:text-white rounded-xl"
+                  >
+                    <i class="bx bxl-figma text-3xl text-orange-700"></i>
+                    <h3 class="font-sans font-normal text-xl cursor-pointer">
+                      Open in Figma
+                    </h3>
+                  </span>
+                </div>
+              </ul>
+            </strong>
+          </section>
+
+          <!-- section 2 -->
+          <section>
+            <img src="src/icons-hero-removebg-preview.png" alt="" />
+          </section>
+        </div>
+      </div>
     </main>
   </body>
 </html>
@@ -64,15 +129,37 @@
 <script>
   function Menu(e) {
     const list = document.querySelector('main')
-    const Moon = document.querySelector('span')
+    const Moon = document.querySelector('#moon')
+    const button = document.querySelector('#Button')
+    const npm = document.querySelector('#npm')
+    const Figma = document.querySelector('#Figma')
+    //
     if (e.name === 'moon') {
-      e.name = 'loader text-[white]'
-      list.classList.add('bg-[black]', 'text-[white]')
-      Moon.classList.add('text-[black]')
+      e.name = 'bx bxs-brightness'
+      list.classList.add('bg-neutral-800', 'text-[white]')
+      Moon.classList.add('text-black')
+      button.classList.add('bg-[#0a4045]', 'text-[white]')
+      npm.classList.add('bg-neutral-700', 'shadow-lg')
+      Figma.classList.add(
+        'border-[1px]',
+        'border-white',
+        'hover:bg-white',
+        'hover:text-black',
+        'hover:shadow-2xl'
+      )
     } else {
       e.name = 'moon'
-      list.classList.remove('bg-[black]', 'text-[white]')
-      Moon.classList.remove('text-[black]')
+      list.classList.remove('bg-neutral-800', 'text-[white]')
+      Moon.classList.remove('text-black')
+      button.classList.remove('bg-[#0a4045]', 'text-[white]')
+      npm.classList.remove('bg-neutral-700', 'shadow-lg')
+      Figma.classList.remove(
+        'border-[1px]',
+        'border-white',
+        'hover:bg-white',
+        'hover:text-black',
+        'hover:shadow-2xl'
+      )
     }
   }
 </script>
