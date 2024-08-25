@@ -63,7 +63,7 @@
       </nav>
     </header>
     <!--  -->
-    <main class="w-full h-[87vh] flex items-center justify-center">
+    <main class="w-full pt-[3rem] flex items-center justify-center">
       <div class="w-[95vw] flex flex-col">
         <div class="flex gap-10">
           <!-- section 1 -->
@@ -86,8 +86,10 @@
                   Include them anyway you like—SVGs, SVG sprite, or web fonts.
                   Use <br />
                   them with or without
-                  <span class="underline text-blue-600">Bootstrap</span> in any
-                  project.</small
+                  <span class="underline text-blue-600 cursor-pointer"
+                    >Bootstrap</span
+                  >
+                  in any project.</small
                 >
                 <div class="flex items-center gap-4">
                   <span
@@ -121,45 +123,63 @@
             <img src="src/icons-hero-removebg-preview.png" alt="" />
           </section>
         </div>
+        <!-- end -->
+
+        <div class="flex flex-col gap-11 pt-8">
+          <section class="flex flex-col gap-12">
+            <ul
+              id="value"
+              class="w-[33.5vw] h-[22vh] bg-[#e8e7fe] flex items-start pt-3 pl-3 justify-start gap-3 rounded-sm"
+            >
+              <img
+                class="inline h-[18vh] w-[10vw] bg-blue-800"
+                src="src/all-pages-2.png"
+                alt=""
+              />
+              <!--  -->
+              <span class="flex flex-col gap-4">
+                <small class="text-sm"
+                  >Build your website for just $3.88/mth. More <br />
+                  value and performance with Namecheap.</small
+                >
+                <small class="underline hover:no-underline cursor-pointer"
+                  >ads via Carbon</small
+                >
+              </span>
+            </ul>
+            <span id="Border" class="w-24 border-[1px] border-[#b8b8b7]"></span>
+          </section>
+          <!--  -->
+          <section class="flex flex-col gap-14">
+            <ul class="font-sans font-normal cursor-pointer text-lg">
+              Currently
+              <span class="text-blue-500 underline">v1.11.3</span>
+              •
+              <span class="text-blue-500 underline">Icons</span>
+              •
+              <span class="text-blue-500 underline">Icon Sprite</span>
+              •
+              <span class="text-blue-500 underline">Install</span>
+              •
+              <span class="text-blue-500 underline">Usage</span>
+              •
+              <span class="text-blue-500 underline">Styling</span>
+              •
+              <span class="text-blue-500 underline">Accessibility</span>
+              •
+              <span class="text-blue-500 underline">GitHub repo</span>
+            </ul>
+
+            <div class="flex pb-16">
+              <span class="w-full border-[1px] border-[#b8b8b7]"></span>
+            </div>
+          </section>
+        </div>
+
+        <!--  -->
       </div>
     </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
-
-<script>
-  function Menu(e) {
-    const list = document.querySelector('main')
-    const Moon = document.querySelector('#moon')
-    const button = document.querySelector('#Button')
-    const npm = document.querySelector('#npm')
-    const Figma = document.querySelector('#Figma')
-    //
-    if (e.name === 'moon') {
-      e.name = 'bx bxs-brightness'
-      list.classList.add('bg-neutral-800', 'text-[white]')
-      Moon.classList.add('text-black')
-      button.classList.add('bg-[#0a4045]', 'text-[white]')
-      npm.classList.add('bg-neutral-700', 'shadow-lg')
-      Figma.classList.add(
-        'border-[1px]',
-        'border-white',
-        'hover:bg-white',
-        'hover:text-black',
-        'hover:shadow-2xl'
-      )
-    } else {
-      e.name = 'moon'
-      list.classList.remove('bg-neutral-800', 'text-[white]')
-      Moon.classList.remove('text-black')
-      button.classList.remove('bg-[#0a4045]', 'text-[white]')
-      npm.classList.remove('bg-neutral-700', 'shadow-lg')
-      Figma.classList.remove(
-        'border-[1px]',
-        'border-white',
-        'hover:bg-white',
-        'hover:text-black',
-        'hover:shadow-2xl'
-      )
-    }
-  }
-</script>
