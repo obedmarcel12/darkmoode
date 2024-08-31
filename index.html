@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>darkmoode</title>
+    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="src/output.css" />
     <link
       rel="stylesheet"
@@ -27,9 +28,10 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-[whitesmoke]">
+  <body>
+    <!-- md header -->
     <header
-      class="w-full h-[13vh] bg-blue-800 shadow-2xl flex items-center justify-between"
+      class="md:flex hidden w-full h-[13vh] bg-blue-800 shadow-2xl items-center justify-between"
     >
       <nav
         class="md:static md:flex md:flex-row flex flex-col md:font-mono md:font-semibold md:hover:text-white hover:text-sky-300 cursor-pointer text-lg md:duration-500 md:items-center items-start md:pl-8 pl-5 absolute md:opacity-100 opacity-0 left-0 gap-5"
@@ -62,8 +64,31 @@
         </span>
       </nav>
     </header>
+
+    <!-- sm header -->
+    <header class="md:hidden flex items-center bg-[#2a4fcb] w-full h-[12vh]">
+      <nav class="w-full flex items-center justify-around">
+        <span class="hidden">
+          <i class="bi bi-search"></i>
+        </span>
+        <!--  -->
+        <ul class="flex items-center justify-end gap-32 w-[80vw]">
+          <span
+            id="bootstrap"
+            class="text-5xl text-[#2a4fcb] bg-white rounded-2xl"
+          >
+            <i class="bi bi-bootstrap"></i>
+          </span>
+          <span id="Menu" class="text-2xl text-white">
+            <ion-icon name="menu" onclick="MenuPhone(this)"></ion-icon>
+          </span>
+        </ul>
+      </nav>
+    </header>
     <!--  -->
-    <main class="w-full pt-[3rem] flex items-center justify-center">
+
+    <!-- md-main -->
+    <main class="md:flex hidden w-full pt-[3rem] items-center justify-center">
       <div class="w-[95vw] flex flex-col">
         <div class="flex gap-10">
           <!-- section 1 -->
@@ -71,7 +96,7 @@
             <ul>
               <button
                 id="Button"
-                class="font-sans font-bold bg-sky-200 rounded-full border-[1px] border-[skyblue] w-[20vw] h-[5.9vh]"
+                class="font-sans font-bold bg-[#a2f2f8] rounded-full border-[1px] border-[skyblue] w-[20vw] h-[5.9vh]"
               >
                 New in v1.11.0: 100 new icons!
               </button>
@@ -171,7 +196,206 @@
             </ul>
 
             <div class="flex pb-16">
-              <span class="w-full border-[1px] border-[#b8b8b7]"></span>
+              <span
+                id="secondBorder"
+                class="w-full border-[1px] border-[#b8b8b7]"
+              ></span>
+            </div>
+          </section>
+        </div>
+
+        <!--  -->
+      </div>
+    </main>
+
+    <!-- phone-main -->
+    <nav
+      id="Nav"
+      class="w-full gap-7 flex flex-col top-[10vh] absolute h-screen transition-all ease-in-out duration-500 md:hidden left-0 opacity-0"
+    >
+      <section class="flex flex-col pl-6 gap-4">
+        <h2 class="font-sans text-white font-normal text-xl">Bootstrap</h2>
+        <span class="w-[88vw] border-[1px] border-gray-300"></span>
+      </section>
+      <!--  -->
+      <section class="flex flex-col pl-6 gap-5">
+        <ul class="font-sans font-normal text-xl flex gap-[4cm] text-white">
+          <p>Docs</p>
+          <p>Examples</p>
+        </ul>
+        <!--  -->
+        <ul class="font-sans font-normal text-white text-xl flex gap-[4cm]">
+          <p>Icons</p>
+          <p>Themes</p>
+        </ul>
+        <!--  -->
+        <p class="font-sans text-white text-xl">Blog</p>
+        <span class="border-[1px] border-gray-300 w-[88vw]"></span>
+      </section>
+
+      <section class="flex flex-col pl-6 gap-5">
+        <ul class="font-sans font-normal text-xl flex gap-[4cm] text-white">
+          <span class="flex items-center gap-3">
+            <i class="bi bi-github"></i>
+            <p>GitHub</p>
+          </span>
+          <!--  -->
+          <span class="flex items-center gap-3">
+            <i class="bi bi-twitter"></i>
+            <p>Twitter</p>
+          </span>
+        </ul>
+        <!--  -->
+        <ul
+          class="font-sans font-normal text-white text-xl flex items-center gap-3"
+        >
+          <i class="bi bi-opencollective"></i>
+          <p>open collective</p>
+        </ul>
+        <!--  -->
+        <ul class="flex flex-col gap-5">
+          <span class="border-[1px] border-gray-300 w-[88vw]"></span>
+          <div class="flex items-center gap-2">
+            <span id="bright" class="cursor-pointer text-white">
+              <ion-icon name="sunny" onclick="Sunny(this)"></ion-icon>
+            </span>
+            <p class="font-sans text-xl font-normal text-white">Toggle theme</p>
+          </div>
+        </ul>
+      </section>
+      <!--  -->
+    </nav>
+    <!--  -->
+    <main
+      id="Main-phone"
+      class="md:hidden w-full pt-[3rem] flex items-center justify-center"
+    >
+      <div class="w-[95vw] flex flex-col">
+        <div class="flex flex-col-reverse gap-10">
+          <!-- section 1 -->
+          <section class="items-center justify-center flex flex-col gap-7">
+            <ul>
+              <button
+                id="ButtonPhone"
+                class="w-[90vw] h-[5.5vh] font-sans font-bold bg-[#a2f2f8] rounded-lg border-[1px] border-[skyblue]"
+              >
+                New in v1.11.0: 100 new icons!
+              </button>
+            </ul>
+
+            <strong class="flex flex-col items-center justify-center gap-3">
+              <b class="font-sans font-semibold text-4xl">Bootstrap Icons </b>
+              <ul class="flex flex-col items-center justify-center gap-8">
+                <small class="font-sans text-center font-normal text-xl"
+                  >Free, high quality, open source icon library with over 2,000
+                  icons. <br />
+                  Include them anyway you like—SVGs, SVG sprite, or web fonts.
+                  Use <br />
+                  them with or without
+                  <span class="underline text-blue-600 cursor-pointer"
+                    >Bootstrap</span
+                  >
+                  in any project.</small
+                >
+                <div class="flex flex-col items-center gap-4">
+                  <span
+                    id="npmPhone"
+                    class="flex items-center justify-center gap-9 shadow-sm w-[90vw] h-[10vh] bg-[#e8e7fe] rounded-xl"
+                  >
+                    <p class="font-mono font-normal text-[5vw]">
+                      $ npm i bootstrap-icons
+                    </p>
+                    <i
+                      class="bi bi-clipboard cursor-pointer hover:text-blue-600 text-xl"
+                    ></i>
+                  </span>
+                  <!--  -->
+                  <span
+                    id="FigmaPhone"
+                    class="flex items-center justify-center gap-1 w-[90vw] h-[9.5vh] border-2 border-black hover:bg-black hover:text-white rounded-xl"
+                  >
+                    <i class="bx bxl-figma text-3xl text-orange-700"></i>
+                    <h3 class="font-sans font-normal text-xl cursor-pointer">
+                      Open in Figma
+                    </h3>
+                  </span>
+                </div>
+              </ul>
+            </strong>
+          </section>
+
+          <!-- section 2 -->
+          <section class="flex items-center justify-center">
+            <img
+              class="inline h-[17vh]"
+              src="src/icons-hero-removebg-preview.png"
+              alt=""
+            />
+          </section>
+        </div>
+        <!-- end -->
+
+        <div class="flex flex-col items-center justify-center gap-11 pt-8">
+          <section class="flex flex-col items-center justify-center gap-12">
+            <ul
+              id="valuePhone"
+              class="w-[90vw] h-[22vh] bg-[#e8e7fe] flex items-start pt-3 pl-3 justify-start gap-8 rounded-sm"
+            >
+              <img
+                class="inline h-[14vh] w-[35vw] bg-blue-800"
+                src="src/all-pages-2.png"
+                alt=""
+              />
+              <!--  -->
+              <span class="flex flex-col gap-4">
+                <small class="text-base text-center font-medium"
+                  >Design and <br />
+                  Development tips in <br />
+                  your inbox. Every <br />
+                  weekday.</small
+                >
+                <small
+                  class="underline relative right-8 font-sans font-medium hover:no-underline cursor-pointer"
+                  >ads via Carbon</small
+                >
+              </span>
+            </ul>
+            <span
+              id="BorderPhone"
+              class="w-24 border-[1px] border-gray-200"
+            ></span>
+          </section>
+          <!--  -->
+          <section class="flex flex-col gap-14">
+            <ul
+              class="font-sans font-normal text-center cursor-pointer text-base"
+            >
+              Currently
+              <span class="text-blue-500 underline">v1.11.3</span>
+              •
+              <span class="text-blue-500 underline">Icons</span>
+              •
+              <span class="text-blue-500 underline">Icon Sprite</span>
+              •
+              <span class="text-blue-500 underline">Install</span>
+              •
+              <span class="text-blue-500 underline">Usage</span>
+              •
+              <span class="text-blue-500 underline">Styling</span>
+              •
+              <span class="text-blue-500 underline">Accessibility</span>
+              •
+              <span class="text-blue-500 underline"
+                >GitHub <br />
+                repo</span
+              >
+            </ul>
+
+            <div class="flex pb-16">
+              <span
+                id="secondBorderPhone"
+                class="w-full border-[1px] border-gray-200"
+              ></span>
             </div>
           </section>
         </div>
