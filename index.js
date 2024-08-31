@@ -87,7 +87,7 @@ function Sunny(event) {
   const ButtonPhone = document.querySelector('#ButtonPhone')
   const npmPhone = document.querySelector('#npmPhone')
   const FigmaPhone = document.querySelector('#FigmaPhone')
-  const valuePhone = document.querySelector('#valuePhone')
+  const valuePhone = document.getElementById('valuePhone')
   const BorderPhone = document.getElementById('BorderPhone')
   const secondBorderPhone = document.getElementById('secondBorderPhone')
   const bright = document.querySelector('#bright')
@@ -100,17 +100,12 @@ function Sunny(event) {
     npmPhone.classList.add('bg-neutral-700', 'shadow-lg')
     FigmaPhone.classList.add(
       'border-[1px]',
-      'border-[white]',
-      'hover:bg-[white]',
+      'border-[#fff]',
+      'hover:bg-[#fff]',
       'hover:text-[black]'
       // 'hover:shadow-2xl'
     )
-    valuePhone.classList.add(
-      'bg-neutral-700',
-      'shadow-lg',
-      'bg-neutral-700',
-      'shadow-lg'
-    )
+    valuePhone.classList.add('bg-[#404040]', 'shadow-lg')
     BorderPhone.classList.add('border-[1px]', 'border-neutral-500')
     secondBorderPhone.classList.add('border-[1px]', 'border-neutral-500')
   } else {
@@ -121,12 +116,12 @@ function Sunny(event) {
     npmPhone.classList.remove('bg-neutral-700', 'shadow-lg')
     FigmaPhone.classList.remove(
       'border-[1px] ',
-      'border-[white]',
-      'hover:bg-[white]',
+      'border-[#fff]',
+      'hover:bg-[#fff]',
       'hover:text-[black]'
       // 'hover:shadow-2xl'
     )
-    valuePhone.classList.remove('bg-neutral-700', 'shadow-lg')
+    valuePhone.classList.remove('bg-[#404040]', 'shadow-lg')
     BorderPhone.classList.remove('border-[1px]', 'border-neutral-500')
     secondBorderPhone.classList.remove('border-[1px]', 'border-neutral-500')
   }

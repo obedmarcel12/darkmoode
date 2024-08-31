@@ -1,0 +1,7 @@
+.figma-hover :hover {
+  background: black;
+  color: white;
+}
+.figma-hover {
+  border: 1px solid black;
+}
