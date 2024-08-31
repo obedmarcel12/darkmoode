@@ -100,10 +100,10 @@ function Sunny(event) {
     npmPhone.classList.add('bg-neutral-700', 'shadow-lg')
     FigmaPhone.classList.add(
       'border-[1px]',
-      'border-white',
+      'border-[white]',
       'hover:bg-[white]',
-      'hover:text-black',
-      'hover:shadow-2xl'
+      'hover:text-[black]'
+      // 'hover:shadow-2xl'
     )
     valuePhone.classList.add(
       'bg-neutral-700',
@@ -120,11 +120,11 @@ function Sunny(event) {
     ButtonPhone.classList.remove('bg-green-800', 'text-[white]')
     npmPhone.classList.remove('bg-neutral-700', 'shadow-lg')
     FigmaPhone.classList.remove(
-      'border-[1px]',
-      'border-white',
+      'border-[1px] ',
+      'border-[white]',
       'hover:bg-[white]',
-      'hover:text-black',
-      'hover:shadow-2xl'
+      'hover:text-[black]'
+      // 'hover:shadow-2xl'
     )
     valuePhone.classList.remove('bg-neutral-700', 'shadow-lg')
     BorderPhone.classList.remove('border-[1px]', 'border-neutral-500')
